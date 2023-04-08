@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/admin_style.css" />
+    <title>ADMIN PANEL</title>
+</head>
+<body>
+    <div class="cointainer">
+        <div class="tob_bar">
+            <img src="../static/img/avator.png" alt="Avatar" class="avatar"> 
+            <div class="admin_detail">
+                <div class="admin_name">{{admin_user}}</div>
+                <div class="admin_name">{{admin_email}}</div>
+            </div>
+        </div>
+        <div class="loh_button_container">
+            <a class="logout_button" href="/admin/create_blog">
+                Create
+                <span>&#43;</span>
+            </a> 
+            <a class="logout_button" href="/admin/logout">Logout</a>
+        </div>
+    </div>
+    <div class="main_container">
+        {% for blog in blog_all %}
+        {% if blog.show_para == False %}
+            <div class="blog_div" onclick="location.href='/admin/detail_blog?id={{blog.id}}';">
+                <h2 class="title_blog">{{blog.title}}</h2>
+                <p class="paragraph">{{blog.paragraph}}</p>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+python -m venv aiblog_env
+
+cd aiblog_env/Script
+
+activate.ps1
+
+pip install -r requirements.txt
+
+python main.py

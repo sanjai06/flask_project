@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/maniuamblog.css" />
+    <title>Manual Blog</title>
+</head>
+<body>
+    <h1 class="Heading-title">Write a MANUAL Blog, (Admin = {{admin_user}})</h1>
+    <div class="Blog_container">
+        <form method="post">
+            <h3>Title</h3>
+            <textarea name="title" id="title_textarea" placeholder="Title..." cols="30" rows="8"></textarea>
+            <h3>Paragraph</h3>
+            <textarea name="patagraph" id="parahrapn_textarea" placeholder="Body..." cols="30" rows="10"></textarea>
+            <div class="Catagart_container">
+                <h3><label for="select" class="label_cat">Select a catagart :</label></h3>
+                <select id="mySelect" name="displayValue">
+                    <option></option>
+                    <option>Spots</option>
+                    <option>Travel</option>
+                    <option>Life Style</option>
+                    <option>Health</option>
+                </select>
+            </div>
+            <div class="submit_button">
+                <button type="submit" class="button">submit</button>
+            </div>
+
+            <div>
+                <h3>Create Blog by Passing Title to AI Engine: 
+                    <a href="#popup1" target="" rel="noopener noreferrer">click here</a>
+                </h3>
+
+                <div id="popup1" class="overlay">
+                    <div class="popup">
+                        <h2>Pass Title to AI Blog Generating Engine: </h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            <h3>Title</h3>
+                            <textarea name="title_aiblog" id="title_textarea" placeholder="Title..." cols="30" rows="8"></textarea>
+                        </div>
+                        <div class="submit_button">
+                            <button type="submit" class="button">submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
